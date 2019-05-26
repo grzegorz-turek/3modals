@@ -2,22 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="some web page">
+        <meta name="description" content="js modals excercise">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Open / close boxes</title>
+        <title>3 modals</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <div id="page-wrapper" class="container">
             <h3>Some dummy page content</h3>
-            <p><a href="#modal-one" class="show-modal">Show modal one</a></p>
-            <p><a href="#modal-two" class="show-modal">Show modal two</a></p>
-            <p><a href="#modal-three" class="show-modal">Show modal three</a></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident obcaecati quaerat maiores dolorem repellendus officia dicta modi doloribus dolorum enim reprehenderit similique neque deleniti ut, exercitationem suscipit nemo blanditiis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident obcaecati quaerat maiores dolorem repellendus officia dicta modi doloribus dolorum enim reprehenderit similique neque deleniti ut, exercitationem suscipit nemo blanditiis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident obcaecati quaerat maiores dolorem repellendus officia dicta modi doloribus dolorum enim reprehenderit similique neque deleniti ut, exercitationem suscipit nemo blanditiis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident obcaecati quaerat maiores dolorem repellendus officia dicta modi doloribus dolorum enim reprehenderit similique neque deleniti ut, exercitationem suscipit nemo blanditiis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora provident obcaecati quaerat maiores dolorem repellendus officia dicta modi doloribus dolorum enim reprehenderit similique neque deleniti ut, exercitationem suscipit nemo blanditiis.</p>
+            <p><a href="#modal-one" class="show-modal" id="testid">Show modal 1 (link 1)</a><a href="#modal-one" class="show-modal">Show modal 1 (link 2)</a></p>
+            <p><a href="#modal-two" class="show-modal">Show modal 2 (link 1)</a><a href="#modal-two" class="show-modal">Show modal 2 (link 2)</a></p>
+            <p><a href="#modal-three" class="show-modal">Show modal 3 (link 1)</a><a href="#modal-three" class="show-modal">Show modal 3 (link 2)</a></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p id="result">test</p>
         </div>
         <div class="overlay" id="modal-overlay">
             <div class="modal" id="modal-one">
