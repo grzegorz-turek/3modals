@@ -1,6 +1,5 @@
 'use strict';
 (function(){
-	
 	var getSelector = function (index) {
 		switch(index) {
 			case 0:
@@ -16,38 +15,26 @@
 				 return '#modal-one';
 		}
 	}
-
 	var showModal = function(event, i){
 		event.preventDefault();
 		document.querySelector('#modal-overlay').classList.add('show');
 		var selector = getSelector(i)
 		document.querySelector(selector).classList.add('show'); // 2. x -> y
 	};
-	
 	var modalLinks = document.querySelectorAll('.show-modal');
-
-//	var logModalLinksIndex = function(modalLinksIndex) {
-//		console.log('modalLinksIndex:', modalLinksIndex);
-//		document.getElementById('result2').innerHTML += '<br> modalLinksIndex: '+ modalLinksIndex;
-//	}
-
 	modalLinks.forEach(function(arg1, index) {
 		arg1.addEventListener('click', function() {
-//			  logModalLinksIndex(index);
 			  showModal(event, index);
 		});
 	});
-
 	var hideModal = function(event){
 		event.preventDefault();
 		document.querySelector('#modal-overlay').classList.remove('show');
 	};
-	
 	var closeButtons = document.querySelectorAll('.modal .close');
 	for(var i = 0; i < closeButtons.length; i++){
 		closeButtons[i].addEventListener('click', hideModal);
 	}
-	
 	document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 	var modals = document.querySelectorAll('.modal');
 	for(var i = 0; i < modals.length; i++){
