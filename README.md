@@ -1,1 +1,1 @@
-https://grzegorz-turek.github.io/3modals/
+JS modals excercise: https://grzegorz-turek.github.io/3modals/
