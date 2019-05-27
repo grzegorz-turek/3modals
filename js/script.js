@@ -5,20 +5,32 @@
 		event.preventDefault();
 		document.querySelector('#modal-overlay').classList.add('show');
 		document.querySelector(x).classList.add('show'); // 2. x -> y
-		document.getElementById("result").innerHTML += ' var x: ' + x + ', var i: ' + i + '<br>'; // 2. x -> y
+		document.getElementById("result").innerHTML += '<br> var x: ' + x + ', var index: ' + index; // 2. x -> y
+
 	};
 	
 	var modalLinks = document.querySelectorAll('.show-modal');
+
+	var logModalLinksIndex = function(modalLinksIndex) {
+		console.log('modalLinksIndex:', modalLinksIndex);
+		document.getElementById('result2').innerHTML += '<br> modalLinksIndex: '+ modalLinksIndex;
+
+
+
+
+	modalLinks.forEach(function(arg1, index) {
+		arg1.addEventListener('click', function() {
+			  logModalLinksIndex(index);
+			  showModal(event);
+		});
+	});
+
+/*
 	for (var i = 0; i < modalLinks.length; i++) {
 		modalLinks[i].addEventListener('click', showModal);
 		var x = modalLinks[i].getAttribute("href"); // 1.
-		//var x = document.getElementsByTagName("a") // 2.
-		//var y = x.getAttribute("href"); // 2.
 	};
-
-	//for (var i = 0; i < modalLinks.length; i++) { // 3.
-	//	var y = modalLinks[i].getAttribute("href"); // 3.
-	//} // 3.
+*/
 
 // addEventListener poza pętlą
 // 1/ funkcja w drugirj pętli
@@ -26,8 +38,7 @@
 // 3. obiekt/tablica
 // 4. if w pierwszej / drugiej pętli?
 
-
-	//var x = document.getElementsByTagName("a")[5].getAttribute("href");  // DZIAŁA
+//var x = document.getElementsByTagName("a")[5].getAttribute("href");  // DZIAŁA
 
 
 	// Dodajemy też funkcję zamykającą modal, oraz przywiązujemy ją do kliknięć na elemencie z klasą "close". 
